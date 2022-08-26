@@ -1,17 +1,19 @@
 const app = require('express')()
-const bodyParser = require('body-parser')
+const server = require('http').createServer(app)
+const { Server } = require("socket.io")
+const io = new Server(server);
+
+io.on('connection', socket => {
+  console.log('IO connected')
+
+  // socket.emit('newMessage', {
+  //   text: 'WHAT'
+  // })
+})
+
 const consola = require('consola')
 const { Nuxt } = require('nuxt')
 const config = require('../nuxt.config')
-
-
-
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-
-
-
-
 
 const nuxt = new Nuxt(config)
 

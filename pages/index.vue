@@ -5,6 +5,11 @@
 <script>
 export default {
   name: 'IndexPage',
-  layout: 'clean'
+  layout: 'clean',
+  sockets: {
+    connect () {
+      console.log('socket connected')
+    }
+  }
 }
 </script>
