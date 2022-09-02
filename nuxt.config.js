@@ -18,8 +18,8 @@ export default {
 
   serverMiddleware: ['@/server/app'],
   // serverMiddleware: {
-  //   path: '@/server/app',
-  //   handler: '@/server/'
+  //   path: '@/server/',
+  //   handler: '@/server/app'
   // },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
